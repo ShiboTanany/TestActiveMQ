@@ -39,14 +39,9 @@ public class NetApplication {
 	public static void main(String[] args) {
 
 
-		ConfigurableApplicationContext context = SpringApplication.run(NetApplication.class, args);
+		SpringApplication.run(NetApplication.class, args);
 
-		JmsTemplate jmsTemplate = context.getBean(JmsTemplate.class);
 
-		// Send a message with a POJO - the template reuse the message converter
-		System.out.println("Sending an email message.");
-		//jmsTemplate.convertAndSend("mailbox", new Email("info@example.com", "Hello"));
-		jmsTemplate.convertAndSend("mailbox", "hellllllllo");
 
 	}
 }
